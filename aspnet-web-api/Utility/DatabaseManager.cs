@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace aspnet_web_api.Utility
 {
-    public class MySQLConnector
+    public class DatabaseManager
     {
     }
 }
