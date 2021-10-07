@@ -7,9 +7,9 @@ namespace aspnet_web_api.Models
 {
     public class Product
     {
-        private int Id { get; set; }
-        private string item { get; set; }
-        private string Description { get; set; }
-        private int price { get; set; }
+        public int Id { get; set; }
+        public string Item { get; set; }
+        public string Description { get; set; }
+        public int Price { get; set; }
     }
 }

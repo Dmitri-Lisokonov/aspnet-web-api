@@ -7,7 +7,7 @@ namespace aspnet_web_api.Models
 {
     public class UserViewModel
     {
-        private int Id { get; set; }
-        private string Username { get; set; }
+        public int Id { get; set; }
+        public string Username { get; set; }
     }
 }

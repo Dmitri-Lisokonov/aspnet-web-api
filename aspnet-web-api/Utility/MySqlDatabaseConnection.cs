@@ -2,19 +2,20 @@
 
 namespace aspnet_web_api.Utility
 {
-    public class MySqlConnection
+    public class MySqlDatabaseConnection
     {
         public string Server { get; set; }
         public string DatabaseName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        private MySql.Data.MySqlClient.MySqlConnection Connection { get; set; }
-        private static MySqlConnection _instance = null;
+        public MySql.Data.MySqlClient.MySqlConnection Connection { get; set; }
+        private static MySqlDatabaseConnection _instance = null;
 
-        public static MySqlConnection Instance()
+        private MySqlDatabaseConnection() { }
+        public static MySqlDatabaseConnection Instance()
         {
             if (_instance == null)
-                _instance = new MySqlConnection();
+                _instance = new MySqlDatabaseConnection();
             return _instance;
         }
 
@@ -24,7 +25,7 @@ namespace aspnet_web_api.Utility
             {
                 if (String.IsNullOrEmpty(DatabaseName))
                     return false;
-                string connstring = string.Format("Server={0}; database={1}; UID={2}; password={3}", Server, DatabaseName, UserName, Password);
+                string connstring = string.Format("Server={0}; database={1}; UID={2}; password={3}; persistsecurityinfo=True; SslMode=none", Server, DatabaseName, UserName, Password);
                 Connection = new MySql.Data.MySqlClient.MySqlConnection(connstring);
                 Connection.Open();
             }
