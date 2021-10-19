@@ -26,7 +26,7 @@ namespace aspnet_web_api.Utility
             {
                 Product product = new Product();
                 product.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
-                product.Item = dataTable.Rows[i]["item"].ToString();
+                product.Name = dataTable.Rows[i]["name"].ToString();
                 product.Description = dataTable.Rows[i]["description"].ToString();
                 product.Price = Convert.ToInt32(dataTable.Rows[i]["price"]);
                 products.Add(product);
