@@ -25,16 +25,46 @@ namespace aspnet_web_api.Controllers
 
         [HttpGet]
         [Route("all")]
-        public List<Product> getAll()
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Product))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult getAll()
         {
-            return _repo.GetAll();
+            List<Product> products = _repo.GetAll();
+            if (products.Count < 1)
+            {
+                return NotFound("No product found with that id");
+            }
+            if (products != null)
+            {
+                return Ok(products);
+            }
+            else
+            {
+                return StatusCode(500, "The server was unable to process your request due to server error or invalid paramaters");
+            }
         }
 
         [HttpGet]
         [Route("{id}")]
-        public List<Product> getAll(int id)
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Product))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult getAll(int id)
         {
-            return _repo.GetById(id);
+            List<Product> products = _repo.GetById(id);
+            if (products.Count < 1)
+            {
+                return NotFound("No product found with that id");
+            }
+            if (products != null)
+            {
+                return Ok(products);
+            }
+            else
+            {
+                return StatusCode(500, "The server was unable to process your request due to server error or invalid paramaters");
+            }
         }
 
     }

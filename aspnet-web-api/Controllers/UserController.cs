@@ -1,5 +1,6 @@
 ﻿using aspnet_web_api.Models;
 using aspnet_web_api.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,16 +24,44 @@ namespace aspnet_web_api.Controllers
         }
         [HttpGet]
         [Route("all")]
-        public List<UserViewModel> getAll()
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult getAll()
         {
-            return _repo.GetAll();
+            List<UserViewModel> users = _repo.GetAll();
+            if (users.Count < 1)
+            {
+                return NotFound("No user found with that id");
+            }
+            if (users != null)
+            {
+                return Ok(users);
+            }
+            else
+            {
+                return StatusCode(500, "The server was unable to process your request due to server error or invalid paramaters");
+            }
         }
 
         [HttpGet]
         [Route("{id}")]
-        public List<UserViewModel> getAll(int id)
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult getAll(int id)
         {
-            return _repo.GetById(id);
+            List<UserViewModel> users = _repo.GetById(id);
+            if (users.Count < 1)
+            {
+                return NotFound("No user found with that id");
+            }
+            if (users != null)
+            {
+                return Ok(users);
+            }
+            else
+            {
+                return StatusCode(500, "The server was unable to process your request due to server error or invalid paramaters");
+            }
         }
     }
 }

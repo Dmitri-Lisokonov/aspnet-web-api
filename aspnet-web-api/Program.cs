@@ -14,7 +14,6 @@ namespace aspnet_web_api
         {
             DatabaseManager manager = new DatabaseManager(@"./Config/DatabaseConfig.json");
             bool isAlive = manager.Connect();
-            manager.ExecuteQuery("SELECT * FROM User");
             CreateHostBuilder(args).Build().Run();
         }
 

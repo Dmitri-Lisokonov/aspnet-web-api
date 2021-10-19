@@ -19,7 +19,7 @@ namespace aspnet_web_api.Utility
             database = MySqlDatabaseConnection.Instance();
         }
         public bool Connect()
-        { 
+        {
             //Read from config and set credentials
             string json = File.ReadAllText(configPath);
             DatabaseCredentials credentials = new DatabaseCredentials();
@@ -33,16 +33,28 @@ namespace aspnet_web_api.Utility
             return isOpen;
         }
 
-        public DataTable ExecuteQuery(string sql)
+        public DataTable ExecuteQuery(string sql, string parameter = null, int paramValue = 0)
         {
             DataTable table = new DataTable();
+     
             try
             {
-                MySqlCommand cmd = new MySqlCommand(sql, database.Connection);
+                
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = database.Connection;
+                cmd.CommandText = sql;
+
+                if (parameter != null)
+                {
+                    cmd.Parameters.AddWithValue(parameter, paramValue);
+                    cmd.Prepare();
+                    Console.WriteLine(cmd.Parameters);
+                }
                 MySqlDataReader reader = cmd.ExecuteReader();
                 table.Load(reader);
                 reader.Close();
                 return table;
+
             }
             catch (Exception ex)
             {

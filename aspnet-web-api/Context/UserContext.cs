@@ -39,8 +39,9 @@ namespace aspnet_web_api.Context
         public List<UserViewModel> GetById(int id)
         {
             List<UserViewModel> users = new List<UserViewModel>();
-            string query = "SELECT * FROM User WHERE User.id =" + id;
-            DataTable table = manager.ExecuteQuery(query);
+            string paramater = "@id";
+            string query = "SELECT * FROM User WHERE User.id =" + paramater;
+            DataTable table = manager.ExecuteQuery(query, paramater, id);
             try
             {
                 users = converter.ConvertToUserViewModel(table);
