@@ -1,5 +1,4 @@
-﻿
-namespace aspnet_web_api.Models
+﻿namespace aspnet_web_api.Models
 {
     public class DatabaseCredentials
     {

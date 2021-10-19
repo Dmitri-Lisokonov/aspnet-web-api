@@ -1,8 +1,6 @@
-
 using aspnet_web_api.Utility;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using System;
 
 
 namespace aspnet_web_api
