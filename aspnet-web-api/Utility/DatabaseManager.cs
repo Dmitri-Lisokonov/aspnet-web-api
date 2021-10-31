@@ -1,6 +1,7 @@
 ﻿using aspnet_web_api.Models;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Text.Json;
@@ -33,22 +34,24 @@ namespace aspnet_web_api.Utility
             return isOpen;
         }
 
-        public DataTable ExecuteQuery(string sql, string parameter = null, int paramValue = 0)
+        public DataTable ExecuteQuery(string sql, bool userParams, Dictionary<string, string> dictionary = null) 
         {
             DataTable table = new DataTable();
      
             try
             {
-                
+
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = database.Connection;
                 cmd.CommandText = sql;
 
-                if (parameter != null)
+                if (userParams == true)
                 {
-                    cmd.Parameters.AddWithValue(parameter, paramValue);
+                    foreach (KeyValuePair<string, string> kvp in dictionary)
+                    {
+                        cmd.Parameters.AddWithValue(kvp.Key, kvp.Value);
+                    }
                     cmd.Prepare();
-                    Console.WriteLine(cmd.Parameters);
                 }
                 MySqlDataReader reader = cmd.ExecuteReader();
                 table.Load(reader);

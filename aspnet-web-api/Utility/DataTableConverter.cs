@@ -10,27 +10,44 @@ namespace aspnet_web_api.Utility
         public List<UserViewModel> ConvertToUserViewModel(DataTable dataTable)
         {
             List<UserViewModel> users = new List<UserViewModel>();
-            for (int i = 0; i < dataTable.Rows.Count; i++)
+            try
             {
-                UserViewModel user = new UserViewModel();
-                user.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
-                user.Username = dataTable.Rows[i]["username"].ToString();
-                users.Add(user);
+                for (int i = 0; i < dataTable.Rows.Count; i++)
+                {
+                    UserViewModel user = new UserViewModel();
+                    user.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
+                    user.Email = dataTable.Rows[i]["email"].ToString();
+                    user.Username = dataTable.Rows[i]["name"].ToString();
+                    users.Add(user);
+                }
             }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
             return users;
         }
         public List<Product> ConvertToProduct(DataTable dataTable)
         {
             List<Product> products = new List<Product>();
-            for (int i = 0; i < dataTable.Rows.Count; i++)
+            try
             {
-                Product product = new Product();
-                product.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
-                product.Name = dataTable.Rows[i]["name"].ToString();
-                product.Description = dataTable.Rows[i]["description"].ToString();
-                product.Price = Convert.ToInt32(dataTable.Rows[i]["price"]);
-                products.Add(product);
+                for (int i = 0; i < dataTable.Rows.Count; i++)
+                {
+                    Product product = new Product();
+                    product.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
+                    product.Name = dataTable.Rows[i]["name"].ToString();
+                    product.Description = dataTable.Rows[i]["description"].ToString();
+                    product.Price = Convert.ToInt32(dataTable.Rows[i]["price"]);
+                    products.Add(product);
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
             return products;
         }
     }

@@ -21,25 +21,7 @@ namespace aspnet_web_api.Context
         {
             List<Product> products = new List<Product>();
             string query = "SELECT * FROM Product";
-            DataTable table = manager.ExecuteQuery(query);
-            try
-            {
-                products = converter.ConvertToProduct(table);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
-            return products;
-        }
-
-        public List<Product> GetById(int id)
-        {
-            List<Product> products = new List<Product>();
-            string paramater = "@id";
-            string query = "SELECT * FROM Product WHERE Product.id =" + paramater;
-            DataTable table = manager.ExecuteQuery(query, paramater, id);
+            DataTable table = manager.ExecuteQuery(query, false);
             try
             {
                 products = converter.ConvertToProduct(table);

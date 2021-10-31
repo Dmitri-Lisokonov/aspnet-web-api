@@ -17,10 +17,5 @@ namespace aspnet_web_api.Repository
         {
             return context.GetAll();
         }
-
-        public List<Product> GetById(int id)
-        {
-            return context.GetById(id);
-        }
     }
 }
