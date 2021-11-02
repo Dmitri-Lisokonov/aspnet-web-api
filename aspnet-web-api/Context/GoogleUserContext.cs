@@ -17,10 +17,10 @@ namespace aspnet_web_api.Context
             manager = new DatabaseManager(connectionString);
         }
 
-        public List<UserViewModel> GetByEmail(string email)
+        public User GetByEmail(string email)
         {
 
-            List<UserViewModel> users = new List<UserViewModel>();
+            List<User> user = new List<User>();
             Dictionary<string, string> dict = new Dictionary<string, string>();
             dict.Add("@email", email);
             string query = $"SELECT * FROM user_google WHERE user_google.email = @email";
@@ -29,19 +29,19 @@ namespace aspnet_web_api.Context
             {
                 try
                 {
-                    users = converter.ConvertToUserViewModel(table);
+                    user = converter.ConvertToUser(table);
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
                 }
             }
-            return users;
+            return user[0];
         }
 
-        public List<UserViewModel> CreateNew(GoogleOAuthResult userResult)
+        public User CreateNew(GoogleOAuthResult userResult)
         {
-            List<UserViewModel> users = new List<UserViewModel>();
+            List<User> user = new List<User>();
             Dictionary<string, string> dict = new Dictionary<string, string>();
             dict.Add("@email", userResult.Email);
             dict.Add("@name", userResult.Name);
@@ -49,13 +49,13 @@ namespace aspnet_web_api.Context
             DataTable table = manager.ExecuteQuery(query, true, dict);
             try
             {
-                users = converter.ConvertToUserViewModel(table);
+                user = converter.ConvertToUser(table);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-            return users;
+            return user[0];
         }
     }
 }

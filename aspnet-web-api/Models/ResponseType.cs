@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace aspnet_web_api.Models
 {
-    public class UserRoles
+    public enum ResponseType
     {
-        public const string Admin = "Admin";
-        public const string User = "User";
+        Success,
+        Failed,
+        Unauthorized,
+        ServerError
     }
 }

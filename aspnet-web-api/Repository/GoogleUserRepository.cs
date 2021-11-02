@@ -13,14 +13,16 @@ namespace aspnet_web_api.Repository
             context = new GoogleUserContext();
         }
 
-        public List<UserViewModel> GetByEmail(string email)
+        public UserViewModel GetByEmail(string email)
         {
-            return context.GetByEmail(email);
+            User user = context.GetByEmail(email);
+            return new UserViewModel(user.Name, user.Email);
         }
 
-        public List<UserViewModel> CreateNew(GoogleOAuthResult userResult)
+        public UserViewModel CreateNew(GoogleOAuthResult userResult)
         {
-            return context.CreateNew(userResult);
+            User user = context.CreateNew(userResult);
+            return new UserViewModel(user.Name, user.Email);
         }
     }
 }

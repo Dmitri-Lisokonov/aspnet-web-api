@@ -7,47 +7,54 @@ namespace aspnet_web_api.Utility
 {
     public class DataTableConverter
     {
-        public List<UserViewModel> ConvertToUserViewModel(DataTable dataTable)
+        public List<User> ConvertToUser(DataTable dataTable)
         {
-            List<UserViewModel> users = new List<UserViewModel>();
-            try
+            List<User> users = new List<User>();
+            if (dataTable != null)
             {
-                for (int i = 0; i < dataTable.Rows.Count; i++)
+                try
                 {
-                    UserViewModel user = new UserViewModel();
-                    user.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
-                    user.Email = dataTable.Rows[i]["email"].ToString();
-                    user.Username = dataTable.Rows[i]["name"].ToString();
-                    users.Add(user);
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        User user = new User();
+                        user.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
+                        user.Email = dataTable.Rows[i]["email"].ToString();
+                        user.Name = dataTable.Rows[i]["name"].ToString();
+                        user.Password = dataTable.Rows[i]["password"].ToString();
+                        user.Role = dataTable.Rows[i]["role"].ToString();
+                        users.Add(user);
+                    }
+                }
+                catch (Exception e)
+                {
+                    return null;
                 }
             }
-            catch(Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
             return users;
         }
+
         public List<Product> ConvertToProduct(DataTable dataTable)
         {
             List<Product> products = new List<Product>();
-            try
+            if (dataTable != null)
             {
-                for (int i = 0; i < dataTable.Rows.Count; i++)
+                try
                 {
-                    Product product = new Product();
-                    product.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
-                    product.Name = dataTable.Rows[i]["name"].ToString();
-                    product.Description = dataTable.Rows[i]["description"].ToString();
-                    product.Price = Convert.ToInt32(dataTable.Rows[i]["price"]);
-                    products.Add(product);
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        Product product = new Product();
+                        product.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
+                        product.Name = dataTable.Rows[i]["name"].ToString();
+                        product.Description = dataTable.Rows[i]["description"].ToString();
+                        product.Price = Convert.ToInt32(dataTable.Rows[i]["price"]);
+                        products.Add(product);
+                    }
+                }
+                catch (Exception e)
+                {
+                    return null;
                 }
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
             return products;
         }
     }
