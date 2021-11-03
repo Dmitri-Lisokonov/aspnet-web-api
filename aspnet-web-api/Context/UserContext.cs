@@ -27,7 +27,7 @@ namespace aspnet_web_api.Context
             dict.Add("@email", email);
             string query = $"SELECT * FROM user WHERE user.email = @email";
             DataTable table = _manager.ExecuteQuery(query, true, dict);
-            if (table.Rows.Count > 0)
+            if (table != null && table.Rows.Count > 0)
             {
                 users = _converter.ConvertToUser(table);
                 return users[0];

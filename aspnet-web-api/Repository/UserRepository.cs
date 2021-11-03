@@ -22,7 +22,14 @@ namespace aspnet_web_api.Repository
         public UserViewModel GetByEmail(string email)
         {
             User user = _context.GetByEmail(email);
-            return new UserViewModel(user.Name, user.Email);
+            if(user != null)
+            {
+                return new UserViewModel(user.Name, user.Email, user.Role);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public bool CreateNew(User user)
@@ -34,10 +41,10 @@ namespace aspnet_web_api.Repository
         public UserViewModel Login(User user)
         {
             User fetchedUser = _context.GetByEmail(user.Email);
-            if(fetchedUser.Email.Equals(user.Email) && fetchedUser.Password.Equals(user.Password))
+            if(fetchedUser != null && fetchedUser.Email.Equals(user.Email) && fetchedUser.Password.Equals(user.Password))
             {
                 string token = _jwtManager.GenerateJSONWebToken(fetchedUser);
-                return new UserViewModel(fetchedUser.Name, fetchedUser.Email, token);
+                return new UserViewModel(fetchedUser.Name, fetchedUser.Email, fetchedUser.Role, token);
             }
             else
             {

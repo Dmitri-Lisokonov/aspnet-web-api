@@ -21,6 +21,7 @@ namespace aspnet_web_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddControllers();
             services.AddCors();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
@@ -46,6 +47,13 @@ namespace aspnet_web_api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(x => x
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .SetIsOriginAllowed(origin => true)
+            .AllowCredentials()); // allow credentials
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -53,12 +61,6 @@ namespace aspnet_web_api
             app.UseAuthentication();
 
             app.UseAuthorization();
-
-            app.UseCors(x => x
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .SetIsOriginAllowed(origin => true)
-                    .AllowCredentials()); // allow credentials
 
             app.UseEndpoints(endpoints =>
             {

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Google.Apis.Auth;
-using Google.Apis.Auth.OAuth2;
 using System.Threading.Tasks;
 using aspnet_web_api.Models;
 
@@ -17,6 +16,7 @@ namespace aspnet_web_api.Utility
 
             try
             {
+                
                 GoogleJsonWebSignature.Payload payload = await GoogleJsonWebSignature.ValidateAsync(token);
                 if (!payload.Audience.Equals("159151186149-jbv6ar6d2m1v8ep15s8a82akngkd8e74.apps.googleusercontent.com"))
                     result.ValidationResult = false;
@@ -32,10 +32,13 @@ namespace aspnet_web_api.Utility
                     {
                         result.ValidationResult = false;
                     }
+                    else
+                    {
+                        result.ValidationResult = true;
+                    }
                 }
                 result.Name = payload.Name;
                 result.Email = payload.Email;
-
             }
             catch (InvalidJwtException e)
             {

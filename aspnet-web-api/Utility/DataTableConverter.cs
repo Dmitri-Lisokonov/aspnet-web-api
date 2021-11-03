@@ -33,6 +33,30 @@ namespace aspnet_web_api.Utility
             return users;
         }
 
+        public List<User> ConvertToGoogleUser(DataTable dataTable)
+        {
+            List<User> users = new List<User>();
+            if (dataTable != null)
+            {
+                try
+                {
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        User user = new User();
+                        user.Id = Convert.ToInt32(dataTable.Rows[i]["id"]);
+                        user.Email = dataTable.Rows[i]["email"].ToString();
+                        user.Name = dataTable.Rows[i]["name"].ToString();
+                        user.Role = dataTable.Rows[i]["role"].ToString();
+                        users.Add(user);
+                    }
+                }
+                catch (Exception e)
+                {
+                    return null;
+                }
+            }
+            return users;
+        }
         public List<Product> ConvertToProduct(DataTable dataTable)
         {
             List<Product> products = new List<Product>();

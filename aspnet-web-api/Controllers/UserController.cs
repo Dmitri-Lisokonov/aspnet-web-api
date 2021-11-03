@@ -4,6 +4,7 @@ using System;
 using Microsoft.Extensions.Logging;
 using aspnet_web_api.Models;
 using aspnet_web_api.Utility;
+using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 
 namespace aspnet_web_api.Controllers
@@ -32,25 +33,25 @@ namespace aspnet_web_api.Controllers
                 UserViewModel fetchedUser = _repo.GetByEmail(user.Email);
                 if (fetchedUser != null)
                 {
-                    return StatusCode(409, new Response(ResponseType.Failed, "Email is already taken"));
+                    return StatusCode(409, new ResponseMessage(ResponseType.FAILED, "Email is already taken"));
                 }
                 else
                 {
                     bool result = _repo.CreateNew(user);
                     if (result)
                     {
-                        return StatusCode(200, new Response(ResponseType.Success, "Account created"));
+                        return StatusCode(200, new ResponseMessage(ResponseType.SUCCESS, "Account created"));
                     }
                     else
                     {
-                        return StatusCode(500, new Response(ResponseType.ServerError, "User could not be inserted into database"));
+                        return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "User could not be inserted into database"));
                     }
       
                 }
             }
             catch (Exception e)
             {
-                return StatusCode(500, new Response(ResponseType.ServerError, "Something went wrong, please check request body"));
+                return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please check request body"));
             }
         }
 
@@ -63,16 +64,16 @@ namespace aspnet_web_api.Controllers
                 UserViewModel result = _repo.Login(user);
                 if (result != null && !result.Email.Equals(""))
                 {
-                    return Ok(result);
+                    return Ok(new ResponseMessage(ResponseType.SUCCESS, JsonSerializer.Serialize(result)));
                 }
                 else
                 {
-                    return StatusCode(401, new Response(ResponseType.Failed, "Username or password is incorrect"));
+                    return StatusCode(401, new ResponseMessage(ResponseType.FAILED, "Username or password is incorrect"));
                 }
             }
             catch (Exception e)
             {
-                return StatusCode(500, new Response(ResponseType.ServerError, "Something went wrong, please check request body"));
+                return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please check request body"));
             }
         }
     }

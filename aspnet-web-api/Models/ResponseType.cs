@@ -7,9 +7,7 @@ namespace aspnet_web_api.Models
 {
     public enum ResponseType
     {
-        Success,
-        Failed,
-        Unauthorized,
-        ServerError
+        SUCCESS,
+        FAILED
     }
 }

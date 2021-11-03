@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace aspnet_web_api.Models
 {
-    public class Response
+    public class ResponseMessage
     {
         public ResponseType Status { get; set; }
         public string Message { get; set; }
 
-        public Response(ResponseType status, string message)
+        public ResponseMessage(ResponseType status, string message)
         {
             this.Status = status;
             this.Message = message;
