@@ -20,7 +20,7 @@ namespace aspnet_web_api.Context
         public List<Product> GetAll()
         {
             List<Product> products = new List<Product>();
-            string query = "SELECT * FROM Product";
+            string query = "SELECT * FROM product";
             DataTable table = manager.ExecuteQuery(query, false);
             try
             {
