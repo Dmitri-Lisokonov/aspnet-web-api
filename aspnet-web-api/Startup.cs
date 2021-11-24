@@ -26,6 +26,8 @@ namespace aspnet_web_api
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.KnownProxies.Add(IPAddress.Parse("172.16.1.3"));
+                options.KnownProxies.Add(IPAddress.Parse("172.16.1.1"));
+                options.KnownProxies.Add(IPAddress.Parse("192.168.1.1"));
             });
             services.AddControllers();
             services.AddCors();
