@@ -42,7 +42,7 @@ namespace aspnet_web_api.Repository
                 if (fetchedUser != null)
                 {
                     string token = _jwtManager.GenerateJSONWebToken(fetchedUser);
-                    return new UserViewModel(fetchedUser.Name, fetchedUser.Email, fetchedUser.Role, token);
+                    return new UserViewModel(fetchedUser.Name, fetchedUser.Email, fetchedUser.Role, fetchedUser.Verified, token);
                 }
                 else
                 {

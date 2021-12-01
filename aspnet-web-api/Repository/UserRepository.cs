@@ -13,10 +13,14 @@ namespace aspnet_web_api.Repository
     {
         private UserContext _context;
         private JWTManager _jwtManager;
+        private UserInputValidator _validator;
+        private HashHelper _hashHelper;
         public UserRepository(IConfiguration config)
         {
             _jwtManager = new JWTManager(config);
             _context = new UserContext();
+            _validator = new UserInputValidator();
+            _hashHelper = new HashHelper();
         }
 
         public UserViewModel GetByEmail(string email)
@@ -32,23 +36,97 @@ namespace aspnet_web_api.Repository
             }
         }
 
-        public bool CreateNew(User user)
+        public string CreateNew(User user)
         {
-            user.Role = "customer";
-            return _context.CreateNew(user);
+            Random random = new Random();
+            int length = 100;
+            user.Role = "admin";
+            string result;
+
+            try
+            {
+                const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                user.ConfirmationToken = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+                result = _validator.ValidateRegistrationInput(user);
+                string salt = _hashHelper.GenerateSalt(70);
+                string hash = _hashHelper.HashPassword(user.Password, salt, 10101, 70);
+                user.Password = hash;
+                user.Salt = salt;
+                user.Email.ToLower();
+            }
+            catch
+            {
+                return "hash failed";
+            }
+            if (result.Equals("success"))
+            {
+                bool fetch = _context.CreateNew(user);
+                if (!fetch)
+                {
+                    return "Could not create user because of server error, please try again later";
+                }
+            }
+            return result;
         }
 
         public UserViewModel Login(User user)
         {
             User fetchedUser = _context.GetByEmail(user.Email);
-            if(fetchedUser != null && fetchedUser.Email.Equals(user.Email) && fetchedUser.Password.Equals(user.Password))
+            if(fetchedUser != null)
             {
-                string token = _jwtManager.GenerateJSONWebToken(fetchedUser);
-                return new UserViewModel(fetchedUser.Name, fetchedUser.Email, fetchedUser.Role, token);
+                string passwordHash = _hashHelper.HashPassword(user.Password, fetchedUser.Salt, 10101, 70);
+                if (fetchedUser != null && fetchedUser.Email.Equals(user.Email.ToLower()) && fetchedUser.Password.Equals(passwordHash))
+                {
+                    string token = _jwtManager.GenerateJSONWebToken(fetchedUser);
+                    return new UserViewModel(fetchedUser.Name, fetchedUser.Email, fetchedUser.Role, fetchedUser.Verified, token);
+                }
+                else
+                {
+                    return null;
+                }
             }
             else
             {
                 return null;
+            }
+   
+        }
+
+        public User SendVerification(User user)
+        {
+            User fetchedUser = _context.GetByEmail(user.Email);
+            if (!fetchedUser.Verified)
+            {
+                GoogleSTMP emailService = new GoogleSTMP();
+                Email mail = new Email("dmitri.lisokonov@gmail.com", "Blueshop verification", $"Hello, {fetchedUser.Name} please verify your email by visiting this link: https://localhost:44350/user/verify/{fetchedUser.ConfirmationToken}");
+                try
+                {
+                    emailService.SendEmail(mail);
+                    return fetchedUser;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return fetchedUser;
+            }
+   
+        }
+
+        public bool VerifyEmail(string confirmationToken)
+        {
+            bool verified = _context.VerifyEmail(confirmationToken);
+
+            if (verified)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

@@ -1,7 +1,6 @@
 {
 
-   "Server": "studmysql01.fhict.local",
-   "Database": "dbi419547",
-   "Username": "dbi419547",
-   "Password": "123Welkom!"
+   "Server": "localhost",
+   "Database": "blueshop",
+   "Password": "root"
 }

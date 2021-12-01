@@ -21,7 +21,10 @@ namespace aspnet_web_api.Utility
                         user.Email = dataTable.Rows[i]["email"].ToString();
                         user.Name = dataTable.Rows[i]["name"].ToString();
                         user.Password = dataTable.Rows[i]["password"].ToString();
+                        user.Salt = dataTable.Rows[i]["salt"].ToString();
                         user.Role = dataTable.Rows[i]["role"].ToString();
+                        user.Verified = (bool) dataTable.Rows[i]["verified"];
+                        user.ConfirmationToken = dataTable.Rows[i]["confirmation_token"].ToString();
                         users.Add(user);
                     }
                 }

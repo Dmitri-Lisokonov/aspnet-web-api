@@ -33,6 +33,7 @@ namespace aspnet_web_api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult GetAll()
         {
+            _logger.LogInformation($"[GET] /product/all [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
             HttpContext currentUser = HttpContext;
             try
             {
@@ -58,8 +59,9 @@ namespace aspnet_web_api.Controllers
         [Route("admin")]
         public IActionResult GetSecretProduct()
         {
+            _logger.LogInformation($"[GET] /product/admin [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
             HttpContext currentUser = HttpContext;
-            bool allowed = _authManager.AuthoriseUser(currentUser);
+            bool allowed = _authManager.AuthoriseAdmin(currentUser);
             if (allowed)
             {
                 return Ok(new ResponseMessage(ResponseType.SUCCESS, "Do you want to drop all tables?"));

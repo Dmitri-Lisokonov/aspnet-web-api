@@ -18,7 +18,7 @@ namespace aspnet_web_api.Utility
             return authorised;
         }
 
-        public bool AuthenticateAdmin(HttpContext httpContext)
+        public bool AuthoriseAdmin(HttpContext httpContext)
         {
             bool authorised = false;
             if (httpContext.User.HasClaim(c => c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role" && c.Value == "admin"))

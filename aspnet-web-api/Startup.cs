@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -29,6 +31,7 @@ namespace aspnet_web_api
                 options.KnownProxies.Add(IPAddress.Parse("172.16.1.1"));
                 options.KnownProxies.Add(IPAddress.Parse("192.168.1.1"));
             });
+
             services.AddControllers();
             services.AddCors();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
@@ -48,7 +51,7 @@ namespace aspnet_web_api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -59,6 +62,10 @@ namespace aspnet_web_api
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
+
+
+            var path = Directory.GetCurrentDirectory();
+            loggerFactory.AddFile("./Logs/Logs.txt");
 
             app.UseCors(x => x
             .AllowAnyMethod()

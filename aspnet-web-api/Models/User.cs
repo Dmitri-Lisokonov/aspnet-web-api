@@ -11,6 +11,9 @@ namespace aspnet_web_api.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Salt { get; set; }
         public string Role { get; set; }
+        public bool Verified { get; set; }
+        public string ConfirmationToken { get; set; }
     }
 }

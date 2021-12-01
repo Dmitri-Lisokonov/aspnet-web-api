@@ -6,6 +6,7 @@
         public string Email { get; set; }
         public string Token { get; set; }
         public string Role { get; set; }
+        public bool Verified { get; set; }
 
         public UserViewModel(string name, string email, string role)
         {
@@ -13,11 +14,12 @@
             Email = email;
             Role = role;
         }
-        public UserViewModel(string name, string email, string role, string token)
+        public UserViewModel(string name, string email, string role, bool verified, string token)
         {
             Name = name;
             Email = email;
             Token = token;
+            Verified = verified;
             Role = role;
         }
 
