@@ -48,8 +48,8 @@ namespace aspnet_web_api.Repository
                 const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                 user.ConfirmationToken = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
                 result = _validator.ValidateRegistrationInput(user);
-                string salt = _hashHelper.GenerateSalt(70);
-                string hash = _hashHelper.HashPassword(user.Password, salt, 10101, 70);
+                string salt = _hashHelper.GenerateSalt();
+                string hash = _hashHelper.HashPassword(user.Password, salt);
                 user.Password = hash;
                 user.Salt = salt;
                 user.Email.ToLower();
@@ -74,7 +74,7 @@ namespace aspnet_web_api.Repository
             User fetchedUser = _context.GetByEmail(user.Email);
             if(fetchedUser != null)
             {
-                string passwordHash = _hashHelper.HashPassword(user.Password, fetchedUser.Salt, 10101, 70);
+                string passwordHash = _hashHelper.HashPassword(user.Password, fetchedUser.Salt);
                 if (fetchedUser != null && fetchedUser.Email.Equals(user.Email.ToLower()) && fetchedUser.Password.Equals(passwordHash))
                 {
                     string token = _jwtManager.GenerateJSONWebToken(fetchedUser);
