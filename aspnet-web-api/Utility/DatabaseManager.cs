@@ -61,7 +61,6 @@ namespace aspnet_web_api.Utility
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
                 return null;
             }
         }
