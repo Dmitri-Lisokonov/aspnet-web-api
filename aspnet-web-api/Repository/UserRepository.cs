@@ -40,7 +40,7 @@ namespace aspnet_web_api.Repository
         {
             Random random = new Random();
             int length = 100;
-            user.Role = "admin";
+            user.Role = "customer";
             string result;
 
             try

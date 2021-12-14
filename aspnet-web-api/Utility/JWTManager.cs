@@ -31,7 +31,7 @@ namespace aspnet_web_api.Utility
             JwtSecurityToken token = new JwtSecurityToken(_config["Jwt:Issuer"],
               _config["Jwt:Issuer"],
               claims,
-              expires: DateTime.Now.AddMinutes(5),
+              expires: DateTime.Now.AddMinutes(100),
               signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

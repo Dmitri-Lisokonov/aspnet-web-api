@@ -28,7 +28,7 @@ namespace aspnet_web_api.Context
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                return null;
             }
 
             return products;
