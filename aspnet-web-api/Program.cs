@@ -19,7 +19,7 @@ namespace aspnet_web_api
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("http://0.0.0.0:5000");
+                    webBuilder.UseUrls("https://0.0.0.0:5000");
                     webBuilder.UseStartup<Startup>();
                 });
     }
