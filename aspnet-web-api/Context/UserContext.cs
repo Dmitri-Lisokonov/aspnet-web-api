@@ -30,11 +30,13 @@ namespace aspnet_web_api.Context
             DataTable table = _manager.ExecuteQuery(query, true, dict);
             if (table != null && table.Rows.Count > 0)
             {
+                Console.WriteLine("context if");
                 users = _converter.ConvertToUser(table);
                 return users[0];
             }
             else
             {
+                Console.WriteLine("context else");
                 return null;
             }
         }

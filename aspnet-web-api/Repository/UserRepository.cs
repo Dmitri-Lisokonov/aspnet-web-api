@@ -71,8 +71,10 @@ namespace aspnet_web_api.Repository
 
         public UserViewModel Login(User user)
         {
-            User fetchedUser = _context.GetByEmail(user.Email);
             Console.WriteLine("repo");
+            Console.WriteLine(user);
+            User fetchedUser = _context.GetByEmail(user.Email);
+            Console.WriteLine("repo result");
             Console.WriteLine(user);
             if (fetchedUser != null)
             {
