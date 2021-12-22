@@ -25,7 +25,7 @@ namespace aspnet_web_api.Utility
             {
                 if (String.IsNullOrEmpty(DatabaseName))
                     return false;
-                string connstring = string.Format("Server={0}; database={1}; UID=superuser; password={2}; persistsecurityinfo=True; SslMode=required", Server, DatabaseName, Password);
+                string connstring = string.Format("Server={0}; database={1}; UID=root; password={2}; persistsecurityinfo=True; SslMode=required", Server, DatabaseName, Password);
                 Connection = new MySql.Data.MySqlClient.MySqlConnection(connstring);
                 Connection.Open();
             }

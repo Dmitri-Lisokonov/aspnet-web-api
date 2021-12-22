@@ -60,6 +60,7 @@ namespace aspnet_web_api.Controllers
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please check request body"));
             }
 
@@ -91,6 +92,7 @@ namespace aspnet_web_api.Controllers
             catch (Exception e)
             {
                 _logger.LogInformation($"[GET] /user/login failed [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please check request body"));
             }
         }
