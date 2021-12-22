@@ -73,6 +73,8 @@ namespace aspnet_web_api.Controllers
             _logger.LogInformation($"[GET] /user/login [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
             try
             {
+                Console.WriteLine("controller");
+                Console.WriteLine(user);
                 UserViewModel result = _repo.Login(user);
                 if (result != null && !result.Email.Equals("") && result.Verified)
                 {

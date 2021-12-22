@@ -72,6 +72,8 @@ namespace aspnet_web_api.Repository
         public UserViewModel Login(User user)
         {
             User fetchedUser = _context.GetByEmail(user.Email);
+            Console.WriteLine("repo");
+            Console.WriteLine(user);
             if (fetchedUser != null)
             {
                 string passwordHash = _hashHelper.HashPassword(user.Password, fetchedUser.Salt);

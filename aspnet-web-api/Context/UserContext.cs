@@ -21,7 +21,8 @@ namespace aspnet_web_api.Context
 
         public User GetByEmail(string email)
         {
-
+            Console.WriteLine("context");
+            Console.WriteLine(email);
             List<User> users = new List<User>();
             Dictionary<string, string> dict = new Dictionary<string, string>();
             dict.Add("@email", email);
