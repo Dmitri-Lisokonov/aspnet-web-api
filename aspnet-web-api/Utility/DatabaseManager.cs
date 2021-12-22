@@ -69,6 +69,8 @@ namespace aspnet_web_api.Utility
             }
             catch (Exception ex)
             {
+                Console.WriteLine("manager");
+                Console.WriteLine(ex);
                 return null;
             }
         }
