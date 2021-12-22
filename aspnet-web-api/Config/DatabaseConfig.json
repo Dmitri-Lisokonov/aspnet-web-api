@@ -1,6 +1,5 @@
 {
-
-   "Server": "localhost",
+  "Server": "localhost",
   "Database": "blueshop",
-   "Password": "123Welkom!"
+  "Password": "123Welkom!"
 }

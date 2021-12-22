@@ -15,5 +15,6 @@ namespace aspnet_web_api.Models
         public string Role { get; set; }
         public bool Verified { get; set; }
         public string ConfirmationToken { get; set; }
+        public DateTime ResetDate { get; set; }
     }
 }

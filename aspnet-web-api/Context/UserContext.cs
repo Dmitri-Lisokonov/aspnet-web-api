@@ -38,6 +38,25 @@ namespace aspnet_web_api.Context
             }
         }
 
+        public User GetByConfirmToken(string token)
+        {
+
+            List<User> users = new List<User>();
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("@confirmation_token", token);
+            string query = $"SELECT * FROM user WHERE user.confirmation_token = @confirmation_token";
+            DataTable table = _manager.ExecuteQuery(query, true, dict);
+            if (table != null && table.Rows.Count > 0)
+            {
+                users = _converter.ConvertToUser(table);
+                return users[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public bool CreateNew(User user)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
@@ -89,6 +108,36 @@ namespace aspnet_web_api.Context
             {
                 return false;
             }
+        }
+
+        public bool UpdateUser(User user)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("@email", user.Email);
+            dict.Add("@name", user.Name);
+            dict.Add("@password", user.Password);
+            dict.Add("@salt", user.Salt);
+            dict.Add("@role", user.Role);
+            dict.Add("@confirmation_token", user.ConfirmationToken);
+            dict.Add("@reset_date", (user.ResetDate - new DateTime(1970, 1, 1)).TotalMilliseconds.ToString());
+            string query = $"UPDATE user SET email=@email, name=@name, password=@password, salt=@salt, role=@role, confirmation_token=@confirmation_token, reset_date=@reset_date WHERE id=" + user.Id;
+            try
+            {
+                DataTable table = _manager.ExecuteQuery(query, true, dict);
+                if (table != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
     }
 }

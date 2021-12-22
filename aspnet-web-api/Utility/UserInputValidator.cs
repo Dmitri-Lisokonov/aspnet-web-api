@@ -49,13 +49,13 @@ namespace aspnet_web_api.Utility
             return noEmpty;
         }
 
-        private string CheckPasswordStrength(User user)
+        public string CheckPasswordStrength(string password)
         {
             Regex rgx = new Regex("[^A-Za-z0-9]");
-            bool hasSpecialChars = rgx.IsMatch(user.Password);
-            bool hasNumbers = user.Password.Any(char.IsDigit);
-            bool hasCapital = user.Password.Any(char.IsUpper);
-            if (user.Password.Length < 10)
+            bool hasSpecialChars = rgx.IsMatch(password);
+            bool hasNumbers = password.Any(char.IsDigit);
+            bool hasCapital = password.Any(char.IsUpper);
+            if (password.Length < 10)
             {
                 return "Password needs to be atleast 10 characters long";
             }
@@ -79,7 +79,7 @@ namespace aspnet_web_api.Utility
 
         public string ValidateRegistrationInput(User user)
         {
-            string passwordStrength = CheckPasswordStrength(user);
+            string passwordStrength = CheckPasswordStrength(user.Password);
             if (!ValidateEmail(user))
             {
                 return "Please enter a correct email address";

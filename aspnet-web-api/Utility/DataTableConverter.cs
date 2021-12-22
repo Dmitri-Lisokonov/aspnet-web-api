@@ -25,6 +25,9 @@ namespace aspnet_web_api.Utility
                         user.Role = dataTable.Rows[i]["role"].ToString();
                         user.Verified = (bool) dataTable.Rows[i]["verified"];
                         user.ConfirmationToken = dataTable.Rows[i]["confirmation_token"].ToString();
+                        DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Local);
+                        double time = (double)dataTable.Rows[i]["reset_date"];
+                        user.ResetDate = dtDateTime.AddMilliseconds(time).ToLocalTime();
                         users.Add(user);
                     }
                 }

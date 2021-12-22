@@ -168,5 +168,44 @@ namespace aspnet_web_api.Controllers
                 
             }
         }
+
+        [HttpPost]
+        [Route("forgotpassword")]
+        public IActionResult ForgotPassword([FromBody] User user)
+        {
+            _logger.LogInformation($"[GET] /user/forgotpassword [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
+            try
+            {
+                User result = _repo.ForgotPassword(user.Email);
+                return Ok(new ResponseMessage(ResponseType.SUCCESS, "If this email is registered on our website, a link has been sent to your email to reset the password"));
+            }
+            catch
+            {
+                return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please try again"));
+            }
+        }
+
+        [HttpPost]
+        [Route("{confirmationToken}")]
+        public IActionResult ResetPassword(string confirmationToken, [FromBody] User user)
+        {
+            _logger.LogInformation($"[GET] /user/resetpassword [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
+            try
+            {
+                string result = _repo.ResetPassword(confirmationToken, user.Password);
+                if (result.Equals("success"))
+                {
+                    return Ok(new ResponseMessage(ResponseType.SUCCESS, "Password reset"));
+                }
+                else
+                {
+                    return StatusCode(409, new ResponseMessage(ResponseType.SUCCESS, result));
+                }
+            }
+            catch
+            {
+                return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please try again"));
+            }
+        }
     }
 }

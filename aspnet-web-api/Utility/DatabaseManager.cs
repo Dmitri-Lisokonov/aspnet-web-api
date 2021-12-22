@@ -49,7 +49,15 @@ namespace aspnet_web_api.Utility
                 {
                     foreach (KeyValuePair<string, string> kvp in dictionary)
                     {
-                        cmd.Parameters.AddWithValue(kvp.Key, kvp.Value);
+                        if(kvp.Key.Equals("@reset_date"))
+                        {
+                            cmd.Parameters.AddWithValue(kvp.Key, double.Parse(kvp.Value));
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue(kvp.Key, kvp.Value);
+                        }
+                      
                     }
                     cmd.Prepare();
                 }
