@@ -1,0 +1,1932 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "3.11.0.0",
+        "fileVersion": "3.11.0-4.21451.6 (0b1a27fd)",
+        "semanticVersion": "3.11.0",
+        "language": "en-GB"
+      },
+      "results": [
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/ProductContext.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 30,
+                  "endLine": 29,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/GoogleUserContext.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 30,
+                  "endLine": 61,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 29,
+                  "endLine": 85,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 30,
+                  "endLine": 110,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'ex' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DatabaseManager.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 30,
+                  "endLine": 70,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/GoogleUserController.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 30,
+                  "endLine": 45,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 30,
+                  "endLine": 92,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/ProductController.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 30,
+                  "endLine": 50,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 139,
+                  "startColumn": 30,
+                  "endLine": 139,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DataTableConverter.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 34,
+                  "endLine": 34,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DataTableConverter.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 34,
+                  "endLine": 59,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DataTableConverter.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 34,
+                  "endLine": 83,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/GoogleOAuthHelper.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 40,
+                  "endLine": 43,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Program.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_context' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/GoogleUserRepository.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 35,
+                  "endLine": 12,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_jwtManager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/GoogleUserRepository.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 28,
+                  "endLine": 13,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_authHelper' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/GoogleUserRepository.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 35,
+                  "endLine": 14,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_manager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/GoogleUserContext.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 25,
+                  "endLine": 11,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_converter' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/GoogleUserContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 28,
+                  "endLine": 12,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'connectionString' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/GoogleUserContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'manager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/ProductContext.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 25,
+                  "endLine": 11,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'converter' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/ProductContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 28,
+                  "endLine": 12,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'connectionString' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/ProductContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_manager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 33,
+                  "endLine": 13,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_converter' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 36,
+                  "endLine": 14,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'connectionString' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 16,
+                  "endLine": 15,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'context' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/ProductRepository.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 24,
+                  "endLine": 10,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_repo' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/ProductController.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 35,
+                  "endLine": 18,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_authManager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/ProductController.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 46,
+                  "endLine": 20,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_repo' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/GoogleUserController.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 38,
+                  "endLine": 18,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_authHelper' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/GoogleUserController.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 35,
+                  "endLine": 20,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_logger' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/GoogleUserController.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 56,
+                  "endLine": 19,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_authHelper' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/GoogleUserController.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 35,
+                  "endLine": 20,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'configPath' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DatabaseManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 24,
+                  "endLine": 14,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'database' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DatabaseManager.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 33,
+                  "endLine": 15,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_repo' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 32,
+                  "endLine": 18,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_authManager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 46,
+                  "endLine": 20,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_context' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 29,
+                  "endLine": 12,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_jwtManager' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 28,
+                  "endLine": 13,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_validator' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 36,
+                  "endLine": 14,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_hashHelper' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 28,
+                  "endLine": 15,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_emailService' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 28,
+                  "endLine": 16,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'GoogleSTMP' to match pascal case naming rules, consider using 'GoogleStmp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/GoogleSTMP.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 18,
+                  "endLine": 11,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_config' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/JWTManager.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 32,
+                  "endLine": 16,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'JWTManager' to match pascal case naming rules, consider using 'JwtManager'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/JWTManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 18,
+                  "endLine": 14,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'topLevel' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/UserInputValidator.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5332",
+          "level": "warning",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/UserRoleAuthorizationManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 58,
+                  "endLine": 14,
+                  "endColumn": 120
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'isAlive'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Program.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 18,
+                  "endLine": 14,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5332",
+          "level": "warning",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/UserRoleAuthorizationManager.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 58,
+                  "endLine": 24,
+                  "endColumn": 120
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'credentials'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DatabaseManager.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 33,
+                  "endLine": 26,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'users'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/GoogleUserContext.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'createdUser'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/GoogleUserContext.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 32,
+                  "endLine": 51,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'users'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 24,
+                  "endLine": 47,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'users'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 24,
+                  "endLine": 26,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/ProductContext.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 17,
+                  "endLine": 31,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "Please review this hard-coded password.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/GoogleSTMP.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 57,
+                  "endLine": 26,
+                  "endColumn": 119
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DatabaseManager.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 32,
+                  "endLine": 48,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'table'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 102,
+                  "startColumn": 31,
+                  "endLine": 102,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1313",
+          "level": "warning",
+          "message": "Make sure using this hardcoded IP address '172.16.1.3' is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Startup.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 58,
+                  "endLine": 32,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1313",
+          "level": "warning",
+          "message": "Make sure using this hardcoded IP address '172.16.1.1' is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Startup.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 58,
+                  "endLine": 33,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1313",
+          "level": "warning",
+          "message": "Make sure using this hardcoded IP address '192.168.1.1' is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Startup.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 58,
+                  "endLine": 34,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DataTableConverter.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 21,
+                  "endLine": 36,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Context/UserContext.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 28,
+                  "endLine": 126,
+                  "endColumn": 189
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2245",
+          "level": "warning",
+          "message": "Make sure that using this pseudorandom number generator is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 29,
+                  "endLine": 41,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2201",
+          "level": "warning",
+          "message": "Use the return value of method 'ToLower'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 17,
+                  "endLine": 55,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'currentUser'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/ProductController.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 25,
+                  "endLine": 37,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DataTableConverter.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 21,
+                  "endLine": 61,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Utility/DataTableConverter.cs",
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 21,
+                  "endLine": 85,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'result'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 180,
+                  "startColumn": 22,
+                  "endLine": 180,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 173,
+                  "startColumn": 23,
+                  "endLine": 173,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 13,
+                  "endLine": 177,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 183,
+                  "startColumn": 17,
+                  "endLine": 183,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 25,
+                  "endLine": 188,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 194,
+                  "startColumn": 25,
+                  "endLine": 194,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 200,
+                  "startColumn": 21,
+                  "endLine": 200,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 206,
+                  "startColumn": 21,
+                  "endLine": 206,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 210,
+                  "startColumn": 21,
+                  "endLine": 210,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 216,
+                  "startColumn": 17,
+                  "endLine": 216,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 221,
+                  "startColumn": 13,
+                  "endLine": 221,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "2": "+3 (incl 2 for nesting)",
+              "3": "+1",
+              "4": "+3 (incl 2 for nesting)",
+              "5": "+3 (incl 2 for nesting)",
+              "6": "+1",
+              "7": "+1",
+              "8": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S2245",
+          "level": "warning",
+          "message": "Make sure that using this pseudorandom number generator is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 138,
+                  "startColumn": 29,
+                  "endLine": 138,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2589",
+          "level": "warning",
+          "message": "Change this condition so that it does not always evaluate to 'true'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 21,
+                  "endLine": 78,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'path'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Software/Back%20End/C%23/Cyber%20security%20S7/aspnet-web-api/aspnet-web-api/Startup.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 17,
+                  "endLine": 90,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS0168": {
+          "id": "CS0168",
+          "shortDescription": "Variable is declared but never used",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0168)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are using PascalCase. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "Redundant Boolean literals should be removed from expressions to improve readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1168": {
+          "id": "S1168",
+          "shortDescription": "Empty arrays and collections should be returned instead of null",
+          "fullDescription": "Returning null instead of an actual array, collection or map forces callers of the method to explicitly test for nullity, making them more complex and less readable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1168",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S1313": {
+          "id": "S1313",
+          "shortDescription": "Using hardcoded IP addresses is security-sensitive",
+          "fullDescription": "Hardcoding IP addresses is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1313",
+          "properties": {
+            "category": "Major Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1854": {
+          "id": "S1854",
+          "shortDescription": "Unused assignments should be removed",
+          "fullDescription": "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code. Even if it’s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1854",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2068": {
+          "id": "S2068",
+          "shortDescription": "Hard-coded credentials are security-sensitive",
+          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+          "properties": {
+            "category": "Blocker Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        },
+        "S2201": {
+          "id": "S2201",
+          "shortDescription": "Return values from functions without side effects should not be ignored",
+          "fullDescription": "When the call to a function doesn’t have any side effects, what is the point of making the call if the results are ignored? In such case, either the function call is useless and should be dropped or the source code doesn’t behave as expected.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2201",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S2245": {
+          "id": "S2245",
+          "shortDescription": "Using pseudorandom number generators (PRNGs) is security-sensitive",
+          "fullDescription": "Using pseudorandom number generators (PRNGs) is security-sensitive. For example, it has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2245",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        },
+        "S2589": {
+          "id": "S2589",
+          "shortDescription": "Boolean expressions should not be gratuitous",
+          "fullDescription": "If a boolean expression doesn’t change the evaluation of the condition, then it is entirely unnecessary, and can be removed. If it is gratuitous because it does not match the programmer’s intent, then it’s a bug and the expression should be fixed.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2589",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2933": {
+          "id": "S2933",
+          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
+          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that’s not marked readonly but is only set in the constructor, it could cause confusion about the field’s intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3776": {
+          "id": "S3776",
+          "shortDescription": "Cognitive Complexity of methods should not be too high",
+          "fullDescription": "Cognitive Complexity is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3776",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S4487": {
+          "id": "S4487",
+          "shortDescription": "Unread \"private\" fields should be removed",
+          "fullDescription": "Private fields only used to store values without reading them later is a case of dead store. So changing the value of such field is useless and most probably indicates a serious error in the code.",
+          "defaultLevel": "note",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope",
+              "Unnecessary"
+            ]
+          }
+        },
+        "S5332": {
+          "id": "S5332",
+          "shortDescription": "Using clear-text protocols is security-sensitive",
+          "fullDescription": "Clear-text protocols such as ftp, telnet or non-secure http lack encryption of transported data, as well as the capability to build an authenticated connection. It means that an attacker able to sniff traffic from the network can read, modify or corrupt the transported content. These protocols are not secure as they expose applications to an extensive range of risks:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5332",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

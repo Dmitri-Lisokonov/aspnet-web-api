@@ -33,6 +33,7 @@ namespace aspnet_web_api.Utility
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e);
                     return null;
                 }
             }
@@ -58,6 +59,7 @@ namespace aspnet_web_api.Utility
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e);
                     return null;
                 }
             }
@@ -82,6 +84,7 @@ namespace aspnet_web_api.Utility
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e);
                     return null;
                 }
             }

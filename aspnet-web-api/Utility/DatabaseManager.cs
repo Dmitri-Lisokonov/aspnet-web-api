@@ -11,8 +11,8 @@ namespace aspnet_web_api.Utility
 {
     public class DatabaseManager
     {
-        private string configPath;
-        MySqlDatabaseConnection database;
+        private readonly string configPath;
+        private readonly MySqlDatabaseConnection database;
 
         public DatabaseManager(string configPath)
         {
@@ -45,7 +45,7 @@ namespace aspnet_web_api.Utility
                 cmd.Connection = database.Connection;
                 cmd.CommandText = sql;
 
-                if (userParams == true)
+                if (userParams)
                 {
                     foreach (KeyValuePair<string, string> kvp in dictionary)
                     {
@@ -69,7 +69,6 @@ namespace aspnet_web_api.Utility
             }
             catch (Exception ex)
             {
-                Console.WriteLine("manager");
                 Console.WriteLine(ex);
                 return null;
             }

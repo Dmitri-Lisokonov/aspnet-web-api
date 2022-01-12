@@ -13,7 +13,7 @@ namespace aspnet_web_api.Utility
 {
     public class JWTManager
     {
-        private IConfiguration _config;
+        private readonly IConfiguration _config;
         public JWTManager(IConfiguration config)
         {
             _config = config;

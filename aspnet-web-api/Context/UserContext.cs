@@ -10,9 +10,9 @@ namespace aspnet_web_api.Context
 {
     public class UserContext
     {
-        private DatabaseManager _manager;
-        private DataTableConverter _converter;
-        string connectionString = @"./Config/DatabaseConfig.json";
+        private readonly DatabaseManager _manager;
+        private readonly DataTableConverter _converter;
+        private readonly string connectionString = @"./Config/DatabaseConfig.json";
         public UserContext()
         {
             _converter = new DataTableConverter();
@@ -84,10 +84,10 @@ namespace aspnet_web_api.Context
             }
             catch(Exception e)
             {
+                Console.WriteLine(e);
                 return false;
             }
         }
-
         public bool VerifyEmail(string confirmationToken)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
@@ -109,10 +109,10 @@ namespace aspnet_web_api.Context
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return false;
             }
         }
-
         public bool UpdateUser(User user)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
@@ -138,9 +138,9 @@ namespace aspnet_web_api.Context
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return false;
             }
-
         }
     }
 }

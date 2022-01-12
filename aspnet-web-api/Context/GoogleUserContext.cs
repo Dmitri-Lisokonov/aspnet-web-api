@@ -8,9 +8,9 @@ namespace aspnet_web_api.Context
 {
     public class GoogleUserContext
     {
-        DatabaseManager _manager;
-        DataTableConverter _converter;
-        string connectionString = @"./Config/DatabaseConfig.json";
+        private readonly DatabaseManager _manager;
+        private readonly DataTableConverter _converter;
+        private readonly string connectionString = @"./Config/DatabaseConfig.json";
         public GoogleUserContext()
         {
             _converter = new DataTableConverter();
@@ -60,6 +60,7 @@ namespace aspnet_web_api.Context
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return null;
             }
         }

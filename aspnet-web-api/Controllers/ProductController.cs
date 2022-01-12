@@ -15,9 +15,9 @@ namespace aspnet_web_api.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private ProductRepository _repo;
-        private readonly ILogger<ProductController> _logger;
-        private UserRoleAuthorizationManager _authManager;
+        private readonly ProductRepository _repo;
+        private ILogger<ProductController> _logger;
+        private readonly UserRoleAuthorizationManager _authManager;
 
         public ProductController(ILogger<ProductController> logger)
         {
@@ -49,6 +49,7 @@ namespace aspnet_web_api.Controllers
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please contact server admin"));
             }
 

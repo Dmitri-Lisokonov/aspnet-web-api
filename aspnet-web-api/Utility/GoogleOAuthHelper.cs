@@ -42,6 +42,7 @@ namespace aspnet_web_api.Utility
             }
             catch (InvalidJwtException e)
             {
+                Console.WriteLine(e);
                 result.ValidationResult = false;
             }
             return result;

@@ -7,7 +7,7 @@ namespace aspnet_web_api.Repository
 {
     public class ProductRepository
     {
-        ProductContext context;
+        readonly ProductContext context;
         public ProductRepository()
         {
             context = new ProductContext();

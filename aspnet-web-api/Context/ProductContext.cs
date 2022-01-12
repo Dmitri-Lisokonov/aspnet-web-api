@@ -8,9 +8,9 @@ namespace aspnet_web_api.Context
 {
     public class ProductContext
     {
-        DatabaseManager manager;
-        DataTableConverter converter;
-        string connectionString = @"./Config/DatabaseConfig.json";
+        private readonly DatabaseManager manager;
+        private readonly DataTableConverter converter;
+        private readonly string connectionString = @"./Config/DatabaseConfig.json";
         public ProductContext()
         {
             converter = new DataTableConverter();
@@ -28,9 +28,9 @@ namespace aspnet_web_api.Context
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return null;
             }
-
             return products;
         }
     }

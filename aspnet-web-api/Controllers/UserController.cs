@@ -15,9 +15,9 @@ namespace aspnet_web_api.Controllers
     [Route("/user")]
     public class UserController : ControllerBase
     {
-        private UserRepository _repo;
+        private readonly UserRepository _repo;
         private readonly ILogger<UserController> _logger;
-        private UserRoleAuthorizationManager _authManager;
+        private readonly UserRoleAuthorizationManager _authManager;
 
 
         public UserController(ILogger<UserController> logger, IConfiguration config)
@@ -73,8 +73,6 @@ namespace aspnet_web_api.Controllers
             _logger.LogInformation($"[GET] /user/login [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
             try
             {
-                Console.WriteLine("controller");
-                Console.WriteLine(user);
                 UserViewModel result = _repo.Login(user);
                 if (result != null && !result.Email.Equals("") && result.Verified)
                 {
@@ -93,8 +91,8 @@ namespace aspnet_web_api.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation($"[GET] /user/login failed [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
                 Console.WriteLine(e);
+                _logger.LogInformation($"[GET] /user/login failed [IP] {Request.HttpContext.Connection.RemoteIpAddress}");
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please check request body"));
             }
         }
@@ -116,8 +114,9 @@ namespace aspnet_web_api.Controllers
                     return StatusCode(409, new ResponseMessage(ResponseType.FAILED, "User is already verified"));
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Could not send verification email, please check request body"));
             }
         }
@@ -139,8 +138,9 @@ namespace aspnet_web_api.Controllers
                     return Ok(new ResponseMessage(ResponseType.FAILED, "Invalid verification url or user already verified"));
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please try again"));
             }
 
@@ -183,8 +183,9 @@ namespace aspnet_web_api.Controllers
                 User result = _repo.ForgotPassword(user.Email);
                 return Ok(new ResponseMessage(ResponseType.SUCCESS, "If this email is registered on our website, a link has been sent to your email to reset the password"));
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please try again"));
             }
         }
@@ -206,8 +207,9 @@ namespace aspnet_web_api.Controllers
                     return StatusCode(409, new ResponseMessage(ResponseType.SUCCESS, result));
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please try again"));
             }
         }

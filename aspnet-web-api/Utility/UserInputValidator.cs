@@ -9,7 +9,7 @@ namespace aspnet_web_api.Utility
 {
     public class UserInputValidator
     {
-        string[] topLevel = { ".net", ".org", ".io", ".com", ".nl", ".ru", ".ir", ".in", ".uk", ".au", ".ua", ".de" };
+        private readonly string[] topLevel = { ".net", ".org", ".io", ".com", ".nl", ".ru", ".ir", ".in", ".uk", ".au", ".ua", ".de" };
         private bool ValidateEmail(User user)
         {
             bool containsDomain = false;

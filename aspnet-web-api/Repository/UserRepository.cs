@@ -9,11 +9,11 @@ namespace aspnet_web_api.Repository
 {
     public class UserRepository
     {
-        private UserContext _context;
-        private JWTManager _jwtManager;
-        private UserInputValidator _validator;
-        private HashHelper _hashHelper;
-        private GoogleSTMP _emailService;
+        private readonly UserContext _context;
+        private readonly JWTManager _jwtManager;
+        private readonly UserInputValidator _validator;
+        private readonly HashHelper _hashHelper;
+        private readonly GoogleSTMP _emailService;
         public UserRepository(IConfiguration config)
         {
             _jwtManager = new JWTManager(config);
@@ -71,15 +71,11 @@ namespace aspnet_web_api.Repository
 
         public UserViewModel Login(User user)
         {
-            Console.WriteLine("repo");
-            Console.WriteLine(user);
             User fetchedUser = _context.GetByEmail(user.Email);
-            Console.WriteLine("repo result");
-            Console.WriteLine(user);
             if (fetchedUser != null)
             {
                 string passwordHash = _hashHelper.HashPassword(user.Password, fetchedUser.Salt);
-                if (fetchedUser != null && fetchedUser.Email.Equals(user.Email.ToLower()) && fetchedUser.Password.Equals(passwordHash))
+                if (fetchedUser.Email.Equals(user.Email.ToLower()) && fetchedUser.Password.Equals(passwordHash))
                 {
                     string token = _jwtManager.GenerateJSONWebToken(fetchedUser);
                     return new UserViewModel(fetchedUser.Name, fetchedUser.Email, fetchedUser.Role, fetchedUser.Verified, token);
@@ -152,7 +148,7 @@ namespace aspnet_web_api.Repository
 
                     if (result)
                     {
-                        Email mail = new Email("dmitri.lisokonov@gmail.com", "Blueshop account recovery", $"Hello, {fetchedUser.Name} please reset your password by visiting this link https://blueshop.tech/user/{fetchedUser.ConfirmationToken}");
+                        Email mail = new Email("dmitri.lisokonov@gmail.com", "Blueshop account recovery", $"Hello, {fetchedUser.Name} please reset your password by visiting this link https://blueshop.tech/reset/{fetchedUser.ConfirmationToken}");
                         _emailService.SendEmail(mail);
                         return fetchedUser;
                     }

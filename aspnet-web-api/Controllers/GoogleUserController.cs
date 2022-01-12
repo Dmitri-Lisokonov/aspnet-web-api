@@ -15,9 +15,9 @@ namespace aspnet_web_api.Controllers
     [Route("/user/google")]
     public class GoogleUserController : ControllerBase
     {
-        private GoogleUserRepository _repo;
+        private readonly GoogleUserRepository _repo;
         private readonly ILogger<GoogleUserController> _logger;
-        private GoogleOAuthHelper _authHelper;
+        private readonly GoogleOAuthHelper _authHelper;
 
         public GoogleUserController(ILogger<GoogleUserController> logger, IConfiguration config)
         {
@@ -44,9 +44,9 @@ namespace aspnet_web_api.Controllers
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 return StatusCode(500, new ResponseMessage(ResponseType.FAILED, "Something went wrong, please check request body"));
             }
         }
-
     }
 }
